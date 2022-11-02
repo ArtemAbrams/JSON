@@ -10,12 +10,12 @@ namespace hometask
 {
    class JSON
     {
-        const string path = @"D:\JSON\ConsoleApp1\ConsoleApp1\fileJson.json";
+        const string path = @"D:\JSON\ConsoleApp1\JSON\ConsoleApp1\fileJson.json";
         JsonSerializerOptions options = new JsonSerializerOptions
         {
             WriteIndented = true
         };
-        public void Deserialization()
+        static public void Deserialization()
         {
             using (var fs = new FileStream(path, FileMode.Open))
             {
@@ -26,7 +26,7 @@ namespace hometask
                 }
             }
         }
-        public void Serialization(params House[] houses)
+        static public void Serialization(params House[] houses)
         {
             using (FileStream fs = new FileStream(path, FileMode.Create))
             {
