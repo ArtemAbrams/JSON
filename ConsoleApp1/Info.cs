@@ -5,10 +5,10 @@ namespace hometask
 {
     class House
     {
-        [JsonIgnore]
+       // [JsonIgnore]
         public int PublishingHouseId { get; set; }
 
-        [JsonPropertyName("Name")]
+        //[JsonPropertyName("Name")]
         public string? Title { get; set; }
 
         public CPublishingHouse? PublishingHouse { get; set;}
